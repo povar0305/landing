@@ -7,29 +7,335 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>OptimizedHTML 5</title>
+	<title>Vaporlax  - индивидуальные pod-системы с фруктовыми ароматами</title>
 	<meta name="description" content="Startup HTML template OptimizedHTML 5">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
-	
-	<link rel="stylesheet" href="css/main.min.css">
+	<script src="https://js.cx/libs/animate.js"></script>
+	<link rel="stylesheet" href="../css/main.min.css">
 
 </head>
 
 <body>
-
-	<div style="max-width: 700px; margin: auto">
-
-		<img src="images/dist/preview.jpg" alt="Start HTML5 Template" style="width: 100%"><br><br>
-		<h2 class="heading">Welcome to startup HTML template OptimizedHTML 5!</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam reprehenderit nulla alias expedita a qui, pariatur doloremque ipsa fugit laboriosam odio iure recusandae laborum delectus praesentium magni reiciendis voluptatem. Sed.</p>
-
+	<div class="fix-button row fixed-bottom m-2">
+		<div class="col-1 position-absolute bottom-0 start-0">
+			<button type="button ">
+				<svg xmlns="http://www.w3.org/2000/svg"fill="currentColor" class="fix-button_arrow bi bi-arrow-up-circle" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+				</svg>
+			</button>
+		</div>
+		<div class=" col-1 position-absolute bottom-0 end-0">
+			<button type="button ">
+				<svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="fix-button_msg bi bi-chat" viewBox="0 0 16 16">
+					<path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+			  	</svg>
+			</button>
+		</div>
 	</div>
+	<header class="header  container-fluid">
+		<div class="sticky-top">
+			<nav class="header__menu row ">
+			
+				<div class="mt-4 row justify-content-center">
+				<div class="header_logo col-md col">
+					<img class="header_img" src="../images/logo.png"  title="Логотип" alt="LOGO" >
+				</div>
+				<div class="header_btn col" id='header_btn'>
+					<svg id="header_menu" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class=" position-absolute top-0 end-0 bi bi-list" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+					</svg>
+					<button id="header_close"type="button" class=" position-absolute top-0 end-0header_btn-close" aria-label="Close"></button>
+				</div>
+				</div>
+				<div class="row">
 
+				</div>
+				<div class="row justify-content-center" id='header_links'>
+					<div class="header_links col-12">
+						<ul class="header_list col">
+							<li class="header_items col">
+								<a href="#" class="header_link">
+									О компании
+								</a>
+							</li>
+							<li class="header_items col">
+								<a href="#" class="header_link">
+									Управление качеством
+								</a>
+							</li>
+							<li class="header_items col">
+								<a href="#" class="header_link">
+									Оформить заявку
+								</a>
+							</li>
+							<li class="header_items col">
+								<a href="#" class="header_link">
+									Видеообзоры
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div> 			
+			<div class=" header_title row">
+				<div class=" header_text col-5 col-lg-4">
+					<p class="header_info">
+                        Попробуй новую жизнь на вкус с одноразовыми электронными сигаретами премиум класса Vaporlax 					</p>
+				</div>
+			</div>
+			<div class="header_arrow-svg row justify-content-center">
+				<div class="header_arrow-content col-1 align-self-end">
+					<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="header_arrow bi bi-caret-down" viewBox="0 0 16 16">
+						<path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+					</svg>
+				</div>
+			</div>
+		</nav>
+	</header>
+</body>
+</html>
+
+
+<!-- начальный экран + продукция -->
+<div class="products container-lg">
+    <div class="products_text row justify-content-center">
+        <div class="col-8 m-5 text-center">
+            <p class="products_title">
+                Vaporlax  — это новый взгляд на потребление никотина. Мы убрали из процесса парения все лишнее и создали уникальное устройство с ярким вкусом в компактном корпусе.
+            </p>
+            <p class="products_title">
+                Высокое качество продукции — это главная ценность Vaporlax . Внутри — насыщенный вкус спелых ягод и фруктов, влюбляющий в себя с первых затяжек. Для того, чтобы начать использовать устройство, достаточно просто сделать один вдох, и вы все сразу поймете.            </p>
+        </div>
+    </div>
+    <div class="cards row justify-content-center">
+        <div class="products_carts row justify-content-center">
+            <div class="col-sm col-12 card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа" title="Вейп">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Vaporlax  nano</h5>
+                  <p class="card-text text-center">Емкость 1,5 мл для электронной жидкости с батареей 300 мАч, поддерживает от 300 до 400 затяжек</p>
+                </div>
+            </div>
+            <div class="col-sm col-12 card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа" title="Вейп">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Vaporlax  nano</h5>
+                  <p class="card-text text-center">Емкость 1,5 мл для электронной жидкости с батареей 300 мАч, поддерживает от 300 до 400 затяжек</p>
+                </div>
+            </div>
+            <div class="col-sm col-12 card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа" title="Вейп">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Vaporlax  nano</h5>
+                  <p class="card-text text-center">Емкость 1,5 мл для электронной жидкости с батареей 300 мАч, поддерживает от 300 до 400 затяжек</p>
+                </div>
+            </div>
+            <div class="col-sm col-12 card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа" title="Вейп">
+                <div class="card-body">
+                  <h5 class="card-title  text-center">Vaporlax  nano</h5>
+                  <p class="card-text text-center">Емкость 1,5 мл для электронной жидкости с батареей 300 мАч, поддерживает от 300 до 400 затяжек</p>
+                </div>
+            </div>
+            <div class="line row">
+            </div>
+            <div class="form row">
+                <div class="row">
+                    <h2 class="form_title text-center">
+                        Оставить заявку
+                    </h2>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="mb-5 col-11 col-mg-12 text-center">
+                        <input class="  col-lg-2 col-12 form_elements form_input" type="text" placeholder="Город"/>
+                        <input class=" col-lg-2 col-12 form_elements form_input" type="text" placeholder="Имя"/>
+                        <input class=" col-lg-2 col-12 form_elements form_input" type="number" placeholder="Телефон"/>
+                        <input class=" col-lg-2 col-12 form_elements form_input" type="email" placeholder="E-mail"/>
+                        <button type="button" class=" col-md-12 col-lg-2 form_button btn btn-dark">
+                                Отправить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--параллакс  -->
+<div class="paralax container-fluid">
+    <div class="row justify-content-center">
+        <h1 class=" col-10 paralax_text text-center">
+            Vaporlax  – яркая палитра вкусов и самый качественный солевой никотин из сша!
+        </h1>
+    </div>
+</div>
+<!-- вторые товары -->
+<div class="products container-lg">
+    <div class="row justify-content-center">
+        <div class="col-10 mt-5 text-center">
+            <h1 class="products_title--second">
+                Vaporlax  nano
+            </h1>
+            <p class="products_title--second">
+                Оцените непревзойденную компактность устройства, все тот же яркий, насыщенный вкус и от 300 до 400 затяжек в младшей модели серии Vaporlax  с аккумулятором 300 mAh.            </p>
+        </div>
+        <div class="card_products row justify-content-center">
+            <div class="col-sm card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа" title="Вейп">
+                <div class="card-body">
+                  <h5 class="card-title--second text-center">Vaporlax  nano</h5>
+                </div>
+            </div>
+            <div class="col-sm card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа" title="Вейп">
+                <div class="card-body">
+                  <h5 class="card-title--second text-center">Vaporlax  nano</h5>
+                </div>
+            </div>
+            <div class="col-sm card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа" title="Вейп">
+                <div class="card-body">
+                  <h5 class="card-title--second text-center">Vaporlax  nano</h5>
+                </div>
+            </div>
+            <div class="col-sm card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа" title="Вейп">
+                <div class="card-body">
+                  <h5 class="card-title--second  text-center">Vaporlax  nano</h5>
+                </div>
+            </div>
+        </div>
+        <div class="card_products row justify-content-center">
+            <div class="col-sm card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа" title="Вейп">
+                <div class="card-body">
+                  <h5 class="card-title--second text-center">Vaporlax  nano</h5>
+                </div>
+            </div>
+            <div class="col-sm card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа" title="Вейп">
+                <div class="card-body">
+                  <h5 class="card-title--second text-center">Vaporlax  nano</h5>
+                </div>
+            </div>
+            <div class="col-sm card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа" title="Вейп">
+                <div class="card-body">
+                  <h5 class="card-title--second text-center">Vaporlax  nano</h5>
+                </div>
+            </div>
+            <div class="col-sm card_products card">
+                <img src="images/vape.png" class="card-img-top" alt="Изображжение вейпа">
+                <div class="card-body">
+                  <h5 class="card-title--second  text-center">Vaporlax  nano</h5>
+                </div>
+            </div>
+        </div>
+        <div class=" row justify-content-center">
+            <div class="col text-centercard_products text-center">
+            <button type="button" class="products_button btn btn-dark m-3">
+                Загрузить еще
+            </button>  
+            </div>
+        </div>
+         
+    </div>
+</div>
+<div class="conteiner-lg">
+    <div class="topic row justify-content-center">
+        <div class="topic_zone col-sm-8 col-12">
+            <p class="topic_text">Vaporlax  — это не только яркий вкус внутри устройства, но и приятный запах вокруг. Пар не оставит следов в вашем доме, офисе или машине. Получайте радость и удовольствие от длительного парения там, где вам этого захочется.</p>
+        </div>
+    </div>
+</div>
+
+<!-- параллакс -->
+<div class="paralax container-fluid">
+    <div class="row justify-content-center">
+        <h1 class=" col-10 paralax_text text-center">
+            Vaporlax  – Никакого неприятного запаха дома, на работе или в машине!
+        </h1>
+    </div>
+</div>
+<!-- просто текст -->
+<div class="dealer conteiner-sm">
+    <div class="dealer_row row justify-content-center">
+        <p class="dealer_text text-center">
+            Хотите стать дилером  Vaporlax ? 
+        </p>
+        <p class="col-8 dealer_text-small text-center">
+            Чтобы стать партнером Vaporlax  в России, свяжитесь с нами любым удобным для вас способом в разделе контактов. 
+        </p>
+    </div>
+</div>
+<!-- форма с картинкой -->
+<div class="request container-fluid">
+    <div class="row">
+        <div class="request_img col-lg-6 col-mg-10">
+            <img class="request_src img-fluid" src="images/request.jpg" alt="Форма" title="Вейп">
+        </div>
+        <div class="request_main-form col-lg-6 col-mg-10">
+            <div class="col ">
+                <p class="request_text">
+                    Оставить заявку
+                </p>
+            </div>
+            <div class="col ">
+                <input class="request_form" type="text" placeholder="Город"/>
+            </div>
+            <div class="col ">
+                <input class="request_form" type="text" placeholder="Имя"/>
+            </div>
+             <div class="col ">
+                 <input class="request_form" type="number" placeholder="Телефон"/>
+             </div>
+             <div class="col ">
+                 <input class="request_form" type="email" placeholder="E-mail"/>
+             </div>
+             <div class="col ">
+                <input class="request_form" type="text" placeholder="Сообщение"/>
+            </div>
+            <div class="col ">
+                <button type="button" class="request_button btn btn-dark p-4 m-5">
+                    Отправить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 	<script src="js/app.min.js"></script>
-
+<footer class="footer ">
+	<div class="footer_name row">
+		<div class="footer_zona col-xl-2 col-sm-12">
+			<h5 class="footer_title">WhatsApp</h5>
+			<p class="footer_text">89005657246</p>
+		</div>
+		<div class="footer_zona col-xl-2 col-sm-12">
+			<h5 class="footer_title">Email</h5>
+			<p class="footer_text">a@mail.ru</p>
+		</div>
+	</div>
+	<div class="footer_media row justify-content-center">
+		<div class="col text-center">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" footer_svg bi bi-bullseye" viewBox="0 0 16 16">
+				<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+				<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+				<path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+				<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+				<path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+			  </svg>
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" footer_svg bi bi-bullseye" viewBox="0 0 16 16">
+				<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+				<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+				<path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+				<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+				<path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+			  </svg>
+		</div>
+	</div>
+</footer>
 </body>
 </html>

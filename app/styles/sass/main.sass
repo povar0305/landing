@@ -1,3 +1,205 @@
 @use 'sass:math'
 @import config
 @import 'blocks/**/*'
+
+.header
+    background-image: url(../images/src/header.jpg)
+    background-attachment: fixed
+    background-size: cover
+    background-repeat: no-repeat
+    flex-direction: column
+
+    &_arrow
+        margin: 25%
+
+    &_list
+        text-align: center
+        z-index: 1
+        
+    &_logo
+        text-align: center
+
+    &_img
+        max-width: 200px
+
+    &_menu
+        padding-top: 1%
+
+    &_items
+        display: inline-flex
+        padding: 2%
+        text-transform: uppercase
+
+    &_link
+        color: #ffffff
+        font-weight: 300
+        text-transform: uppercase
+        letter-spacing: 0.5px
+        text-decoration: none
+        font-style: 90%
+
+    &_title
+        margin-left: 15%
+
+    &_info
+        font-size: 250%
+        color: #ffffff
+        text-transform: uppercase
+
+    &_arrow-svg
+        color: white
+
+    &_arrow-content
+        text-align: center
+
+    &_btn, &_btn-close
+        display: none
+
+// ! Забыла про амперсанд?)
+// а как я тут с ним, если нет главного класса?
+.products_title
+    font-size: 20px
+    
+    @media screen and (max-width: 425px)
+        text-align: left
+
+.products_text
+    padding: 2%
+
+.card_products
+    margin: 2%
+    border: none
+
+.card-title
+    font-weight: 700
+    text-transform: uppercase
+
+.card-text
+    font-size: 90%
+
+.line
+    height: 1px
+    background: #DDDDDD
+
+.form
+    border-top: solid 1px 
+    &_title
+        padding: 5%
+        text-transform: uppercase
+
+    &_elements
+        display: inline-flex
+        border-radius: 5px
+        padding: 2%
+        margin: 1%
+
+    &_button
+        border-radius: 5px
+        padding: 2%
+        margin: 1%
+
+    &_elements input
+        border: 1px solid #000000
+        padding: 5%
+        border-radius: 5px
+
+.paralax
+    background-image: url(../images/src/paralax.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
+
+    &_text
+        text-transform: uppercase
+        color: white
+        font-weight: 300
+        padding: 6%
+
+.dealer_text
+    font-size: 36px
+    text-transform: uppercase
+
+.dealer_row
+    padding: 5%
+
+.dealer_text-small
+    font-size: 20px
+
+.request, .request_form, .request_button
+    background: #FAFAFA
+
+    &_form
+        width: 90%
+        padding: 4%
+        margin: 1%
+        border-color: transparent transparent #B3B3B3 transparent
+        color: #B3B3B3
+
+    &_img, &_src
+        background-size: cover
+        background-repeat: no-repeat
+
+    &_text
+        font-size: 36px
+        padding-left: 2%
+        text-transform: uppercase
+
+    &_main-form
+        padding: 2%
+    
+    &_src
+        max-height: 80%
+
+    &_button
+        width: 30%
+        border-radius: 5px
+        color: black
+
+.products_button
+    padding: 1%
+    border-radius: 5px
+    background: white
+    color: black
+
+.topic_zone
+    background-color: #F5F5F5
+    margin: 5%
+.topic_text
+    margin: 5%
+    font-size: 20px
+
+.fix-button button
+    background-color: transparent
+    border: transparent
+
+.fix-button_msg, .fix-button_arrow
+    min-width: 50px
+    min-height: 50px
+
+
+
+.footer
+    background-color: black
+
+    &_title
+        color: white
+
+    &_text
+        color: #787878
+
+    &_name
+        padding-left: 25%
+        padding-top: 3%
+
+
+
+
+    // Павел Борисович попросил сделать слайдеры из товара на мобильных устройствах
+// .cards,.card_products
+//      @media screen and (max-width: 580px)
+//         display: none
+.carousel
+    display: none
+    // @media screen and (max-width: 580px)
+    //     display: block
+
