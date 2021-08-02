@@ -11,7 +11,7 @@ import gsap from 'gsap'
 require('~/app/libs/cookie/cookie.js')
 $(document).ready(function() {
     //анимация стрелочки
-    gsap.to(".header_arrow-arrow", { y: 5, duration: 5, repeat: -1 });
+    gsap.to(".header_arrow-arrow", { y: 5, duration: 1, repeat: -1 });
 
     const checkAdult = () => {
         var statusGlobal;
@@ -130,8 +130,14 @@ $(document).ready(function() {
         // use maskPhone('селектор элементов', 'маска, если маску не передать то будет работать стандартная +7 (___) ___-__-__');
 
     $(window).on("scroll", function() {
-        if ($(window).scrollTop() > 300) $('.sticky-top').addClass('header_scroll');
-        if ($(window).scrollTop() < 300) $('.sticky-top').removeClass('header_scroll');
+        if ($(window).scrollTop() > 300) {
+            $('.sticky-top').addClass('header_scroll');
+            $('.fix-button_arrow').removeClass('display_none');
+        }
+        if ($(window).scrollTop() < 300) {
+            $('.sticky-top').removeClass('header_scroll');
+            $('.fix-button_arrow').addClass('display_none');
+        }
     });
 
 
