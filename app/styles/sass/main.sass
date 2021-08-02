@@ -1,13 +1,29 @@
 @use 'sass:math'
 @import config
 @import 'blocks/**/*'
+a
+    text-decoration: none
+    color: white
+
+.display_none
+    display: none
+
+.display_fixed
+    display: fixed
 
 .header
+    position: relative
+    height: 100vh
     background-image: url(../images/src/header.jpg)
     background-attachment: fixed
     background-size: cover
     background-repeat: no-repeat
     flex-direction: column
+    padding: 0
+    &_scroll
+        background-color: gray
+        position: fixed
+        width: 100%
 
     &_arrow
         margin: 25%
@@ -42,33 +58,46 @@
         margin-left: 15%
 
     &_info
-        font-size: 250%
+        padding-top: 35%
+        font-size: 150%
         color: #ffffff
         text-transform: uppercase
 
     &_arrow-svg
         color: white
+        position: absolute
+        bottom: 0
 
     &_arrow-content
         text-align: center
+        position: relative
 
     &_btn, &_btn-close
         display: none
-
-// ! Забыла про амперсанд?)
-// а как я тут с ним, если нет главного класса?
-.products_title
-    font-size: 20px
     
-    @media screen and (max-width: 425px)
-        text-align: left
+    &_arrow-arrow
+        position: absolute
+        bottom: 0
+        left: calc(100% + 2000%)
 
-.products_text
-    padding: 2%
 
-.card_products
-    margin: 2%
-    border: none
+.products
+    &_title
+        font-size: 20px
+
+    &_text
+        padding: 2%
+
+    &_button
+        padding: 1%
+        border-radius: 5px
+        background: white
+        color: black
+
+.card
+    &_products
+        margin: 2%
+        border: none
 
 .card-title
     font-weight: 700
@@ -115,15 +144,16 @@
         font-weight: 300
         padding: 6%
 
-.dealer_text,.shop_title
-    font-size: 36px
-    text-transform: uppercase
+.dealer
+    &_text,.shop_title
+        font-size: 36px
+        text-transform: uppercase
 
-.dealer_row
-    padding: 5%
+    &_row
+        padding: 5%
 
-.dealer_text-small
-    font-size: 20px
+    &_text-small
+        font-size: 20px
 
 .request, .request_form, .request_button
     background: #FAFAFA
@@ -155,18 +185,13 @@
         border-radius: 5px
         color: black
 
-.products_button
-    padding: 1%
-    border-radius: 5px
-    background: white
-    color: black
-
-.topic_zone
-    background-color: #F5F5F5
-    margin: 5%
-.topic_text
-    margin: 5%
-    font-size: 20px
+.topic
+    &_zone
+        background-color: #F5F5F5
+        margin: 5%
+    &_text
+        margin: 5%
+        font-size: 20px
 
 .fix-button button
     background-color: transparent
@@ -175,8 +200,6 @@
 .fix-button_msg, .fix-button_arrow
     min-width: 50px
     min-height: 50px
-
-
 
 .footer
     background-color: black
@@ -208,3 +231,38 @@
 
 .shop_button
     padding-inline: 5%
+
+.form_button:hover,.shop_button:hover
+    background: white
+    color: black
+
+.alert
+    &_body
+        position: fixed
+        width: 500px
+        height: 250px
+        left: calc(50% - 250px)
+        top: calc(50% - 250px)
+        background: #fff
+        z-index: 1000
+        
+
+    &_button
+        min-height: 60px
+        width: 30%
+        border-radius: 25px
+        background: orange
+        border: none
+
+.gray
+    position: absolute
+    top:0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,.9)
+    z-index: 5000
+
+@media screen and (max-width: 425px)
+    .products_title
+        text-align: left    

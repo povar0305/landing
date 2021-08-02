@@ -5,8 +5,6 @@
 <div class="products container-lg">
     <div class="products_text row justify-content-center">
         <div class="col-8 m-5 text-center">
-            <!-- ! Названия классов не соответствуют назначению -->
-            <!-- а как их тут лучше назвать? -->
             <p class="products_title">
                 Vaporlax — это новый взгляд на потребление никотина. Мы убрали из процесса парения все лишнее и создали уникальное устройство с ярким вкусом в компактном корпусе.
             </p>
@@ -15,8 +13,8 @@
             </p>
         </div>
     </div>
-    <!-- карусель для мобильной версии -->
 
+    <!-- карусель для мобильной версии -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -98,15 +96,18 @@
             </h2>
         </div>
         <div class="row justify-content-center align-items-center">
-            <div class="mb-5 col-11 col-mg-12 text-center">
-                <input class="  col-lg-2 col-12 form_elements form_input" type="text" placeholder="Город" />
-                <input class=" col-lg-2 col-12 form_elements form_input" type="text" placeholder="Имя" />
-                <input class=" col-lg-2 col-12 form_elements form_input" type="number" placeholder="Телефон" />
-                <input class=" col-lg-2 col-12 form_elements form_input" type="email" placeholder="E-mail" />
-                <button type="button" class=" col-md-12 col-lg-2 form_button btn btn-dark">
-                    Отправить
-                </button>
-            </div>
+            <form action="">
+                <div class="mb-5 col-11 col-mg-12 text-center">
+                    <input class=" form_city col-lg-2 col-12 form_elements form_input" type="text" placeholder="Город" />
+                    <input class=" form_name col-lg-2 col-12 form_elements form_input" type="text" placeholder="Имя" />
+                    <input class=" form_phone col-lg-2 col-12 form_elements form_input" type="phone" placeholder="Телефон" />
+                    <input class=" form_email col-lg-2 col-12 form_elements form_input" type="email" placeholder="E-mail" />
+                    <button type="button" class="form_button col-md-12 col-lg-2 form_button btn btn-dark">
+                        Отправить
+                    </button>
+                </div>
+            </form>
+
         </div>
     </div>
 </div>
@@ -238,19 +239,23 @@
     <div class="row justify-content-center">
         <div class="col-2 m-5 text-center">
             <div class="row">
-                <button type="button" class="shop_button btn btn-outline-dark m-3">
-                    <a class="link-dark"  href="http://ruvape.ru/">Опт</a>
-                </button>
-
+                <a href="http://ruvape.ru/">
+                    <button type="button" class="shop_button btn btn-dark">
+                        Опт
+                    </button>
+                </a>
             </div>
         </div>
         <div class="col-2 m-5 text-center">
             <div class="row">
-                <button type="button" class="btn btn-outline-dark m-3">
-                    <a  class="link-dark" href="http://vapezone.pro/">Розница</a>
-                </button>
+                <a href="http://vapezone.pro/">
+                    <button type="button" class="shop_button btn btn-dark">
+                        Розница
+                    </button>
+                </a>
             </div>
         </div>
+
     </div>
 </div>
 <!-- форма с картинкой -->
@@ -273,7 +278,7 @@
                     <input class="request_form" type="text" placeholder="Имя" />
                 </div>
                 <div class="col ">
-                    <input class="request_form" type="number" placeholder="Телефон" />
+                    <input class="request_form" type="phone" placeholder="Телефон" />
                 </div>
                 <div class="col ">
                     <input class="request_form" type="email" placeholder="E-mail" />
