@@ -3,7 +3,6 @@
 @import 'blocks/**/*'
 a
     text-decoration: none
-    color: white
 
 .display_none
     display: none
@@ -228,10 +227,53 @@ a
     //     display: block
 
 .shop
-    margin: 5%
+    margin: 2%
 
-.shop_button
-    padding-inline: 5%
+    &_main
+        padding-right: 0
+
+    &_link
+        z-index: 1500
+        width: 100%
+        height: 453px
+        display: block
+        color: white
+        font-size: 45px
+
+    &_img
+        padding: 0
+        position: relative
+        width: 100%
+
+
+    &_img-rozn
+        background-image: url('../images/src/pozn.png')
+    
+    &_img-opt
+        background-image: url('../images/src/opt.png')
+
+    &_img-opt,&_img-rozn
+        background-size: cover
+        background-repeat: no-repeat
+
+    &_text
+        color: white
+        position: absolute
+        text-transform: uppercase
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    
+    &_link:hover
+        filter: brightness(40%)
+    
+    &_img:hover .shop_text
+        z-index: 2000
+        color: orange
+        
+
+    &_button
+        padding-inline: 5%
 
 .form_button:hover,.shop_button:hover
     background: white
@@ -266,4 +308,4 @@ a
 
 @media screen and (max-width: 425px)
     .products_title
-        text-align: left    
+        text-align: left   

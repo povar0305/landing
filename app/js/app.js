@@ -1,17 +1,77 @@
 //Import jQuery module (npm i jquery)
-import $ from 'jquery'
+import $, { event } from 'jquery'
 window.jQuery = $
 window.$ = $
 
-import cookie from 'jquery.cookie'
 import gsap from 'gsap'
-
+import aos from 'aos'
+import IMask from 'imask'
 // Import vendor jQuery plugin example (not module)
 //?require('~/app/libs/mmenu/dist/mmenu.js')
 require('~/app/libs/cookie/cookie.js')
+require('~/app/libs/wow/dist/wow.min.js')
+
 $(document).ready(function() {
+    aos.init();
+
+    //
+    // const shopLinks = document.querySelectorAll('.shop_link');
+
+    // $(".shop_link").on("mouseover ", function() {
+    //     //быстро изменяем стиль display
+    //     $(".shop_text").css('color', 'orange');
+    // });
+    // $(".shop_link").on("mouseout", function() {
+    //     //быстро изменяем стиль display
+    //     $(".shop_text").css('color', 'white');
+    // });
+
+    const checkReg = (str = `+7(___)___-__-__`, regex = /_/gm) => {
+        let m;
+        while ((m = regex.exec(str)) !== null) {
+            // This is necessary to avoid infinite loops with zero-width matches
+            if (m.index === regex.lastIndex) {
+                regex.lastIndex++;
+                return true;
+            }
+
+            // The result can be accessed through the `m`-variable.
+            m.forEach((match, groupIndex) => {
+                return false;
+            });
+        }
+    };
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            const fields = form.querySelectorAll('input');
+            fields.forEach(field => {
+                if (field.value === '') {
+                    field.setAttribute('required');
+                } else {
+                    const fieldPhone = form.querySelector('.phone-mask');
+                    if (!checkReg(fieldPhone.value)) {
+                        field.setAttribute('require');
+                    };
+                };
+            });
+
+        })
+    })
+    const selector = document.querySelectorAll('.phone-mask');
+    selector.forEach(element => {
+        var maskOptions = {
+            mask: '+{7}(000)000-00-00',
+            lazy: false
+        };
+        let mask = IMask(element, maskOptions);
+    });
+
+
     //анимация стрелочки
     gsap.to(".header_arrow-arrow", { y: 5, duration: 1, repeat: -1 });
+
 
     const checkAdult = () => {
         var statusGlobal;
@@ -81,54 +141,6 @@ $(document).ready(function() {
         setCookieForUserStart();
     }
 
-    // checkAdult();
-
-
-
-    // testGsap.to(".header_arrow-arrow", { y: 100, duration: 1 });
-
-    const maskPhone = (selector, masked = "+7 (___) ___-__-__") => {
-            const elems = document.querySelectorAll(selector);
-
-            function mask(event) {
-                const keyCode = event.keyCode;
-                const template = masked,
-                    def = template.replace(/\D/g, ""),
-                    val = this.value.replace(/\D/g, "");
-
-                let i = 0,
-                    newValue = template.replace(/[_\d]/g, a =>
-                        (i < val.length ? val.charAt(i++) || def.charAt(i) : a)
-                    );
-                i = newValue.indexOf("_");
-                if (i != -1) {
-                    newValue = newValue.slice(0, i);
-                }
-                let reg = template
-                    .substr(0, this.value.length)
-                    .replace(/_+/g, a => "\\d{1," + a.length + "}")
-                    .replace(/[+()]/g, "\\$&");
-                reg = new RegExp("^" + reg + "$");
-                if (!reg.test(this.value) ||
-                    this.value.length < 5 ||
-                    (keyCode > 47 && keyCode < 58)
-                ) {
-                    this.value = newValue;
-                }
-                if (event.type == "blur" && this.value.length < 5) {
-                    this.value = "";
-                }
-            }
-
-            for (const elem of elems) {
-                elem.addEventListener("input", mask);
-                elem.addEventListener("focus", mask);
-                elem.addEventListener("blur", mask);
-            }
-        }
-        //maskPhone('.form_phone', "+7 (___) ___-__-__");
-        // use maskPhone('селектор элементов', 'маска, если маску не передать то будет работать стандартная +7 (___) ___-__-__');
-
     $(window).on("scroll", function() {
         if ($(window).scrollTop() > 300) {
             $('.sticky-top').addClass('header_scroll');
@@ -140,5 +152,4 @@ $(document).ready(function() {
         }
     });
 
-
-})
+});

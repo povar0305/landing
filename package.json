@@ -36,11 +36,17 @@
 		"webpack-stream": "^6.1.2"
 	},
 	"dependencies": {
+		"animate.css": "^4.1.1",
+		"aos": "^2.3.4",
 		"bower": "^1.8.12",
 		"gasp": "0.0.2",
 		"git": "^0.1.5",
 		"gsap": "^3.7.1",
+		"imask": "^6.1.0",
+		"inputmask": "^5.0.6",
 		"jquery": "^3.6.0",
-		"jquery.cookie": "^1.4.1"
+		"jquery.cookie": "^1.4.1",
+		"wow.js": "^1.2.2",
+		"wowjs": "^1.1.3"
 	}
 }
