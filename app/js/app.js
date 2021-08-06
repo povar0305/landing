@@ -142,11 +142,11 @@ $(document).ready(function() {
     }
 
     $(window).on("scroll", function() {
-        if ($(window).scrollTop() > 300) {
+        if ($(window).scrollTop() > 250) {
             $('.sticky-top').addClass('header_scroll');
             $('.fix-button_arrow').removeClass('display_none');
         }
-        if ($(window).scrollTop() < 300) {
+        if ($(window).scrollTop() < 250) {
             $('.sticky-top').removeClass('header_scroll');
             $('.fix-button_arrow').addClass('display_none');
         }

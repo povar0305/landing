@@ -46,7 +46,7 @@ a
         text-transform: uppercase
 
     &_link
-        color: #ffffff
+        color:  $whiteColor
         font-weight: 300
         text-transform: uppercase
         letter-spacing: 0.5px
@@ -59,11 +59,11 @@ a
     &_info
         padding-top: 35%
         font-size: 150%
-        color: #ffffff
+        color:  $whiteColor
         text-transform: uppercase
 
     &_arrow-svg
-        color: white
+        color:  $whiteColor
         position: sticky
         top: 200%
         bottom: 0
@@ -91,8 +91,8 @@ a
     &_button
         padding: 1%
         border-radius: 5px
-        background: white
-        color: black
+        background:  $whiteColor
+        color: $blackColor
 
 .card
     &_products
@@ -140,7 +140,7 @@ a
 
     &_text
         text-transform: uppercase
-        color: white
+        color:  $whiteColor
         font-weight: 300
         padding: 6%
 
@@ -156,7 +156,7 @@ a
         font-size: 20px
 
 .request, .request_form, .request_button
-    background: #FAFAFA
+    background:  $whiteColor
 
     &_form
         width: 90%
@@ -187,7 +187,7 @@ a
 
 .topic
     &_zone
-        background-color: #F5F5F5
+        background-color:  $whiteColor
         margin: 5%
     &_text
         margin: 5%
@@ -202,10 +202,10 @@ a
     min-height: 50px
 
 .footer
-    background-color: black
+    background-color: $blackColor
 
     &_title
-        color: white
+        color:  $whiteColor
 
     &_text
         color: #787878
@@ -237,7 +237,7 @@ a
         width: 100%
         height: 453px
         display: block
-        color: white
+        color:  $whiteColor
         font-size: 45px
 
     &_img
@@ -257,7 +257,7 @@ a
         background-repeat: no-repeat
 
     &_text
-        color: white
+        color:  $whiteColor
         position: absolute
         text-transform: uppercase
         top: 50%
@@ -265,19 +265,19 @@ a
         transform: translate(-50%, -50%)
     
     &_link:hover
-        filter: brightness(40%)
+        background: #292929cc
     
     &_img:hover .shop_text
         z-index: 2000
-        color: orange
+        color: $accent
         
 
     &_button
         padding-inline: 5%
 
 .form_button:hover,.shop_button:hover
-    background: white
-    color: black
+    background:  $whiteColor
+    color: $blackColor
 
 .alert
     &_body
@@ -294,7 +294,7 @@ a
         min-height: 60px
         width: 30%
         border-radius: 25px
-        background: orange
+        background: $accent
         border: none
 
 .gray
@@ -303,7 +303,7 @@ a
     left: 0
     width: 100%
     height: 100%
-    background: rgba(0,0,0,.9)
+    background: gray
     z-index: 5000
 
 @media screen and (max-width: 425px)
