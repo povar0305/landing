@@ -20,4 +20,6 @@
 # Мобильная версия
 ![](https://github.com/povar0305/landing/blob/5075baa819d753ad39e2190b08eddc2e2e2a86b0/4.jpg)
 ![](https://github.com/povar0305/landing/blob/5075baa819d753ad39e2190b08eddc2e2e2a86b0/5.jpg)
+![](https://github.com/povar0305/landing/blob/5075baa819d753ad39e2190b08eddc2e2e2a86b0/6.jpg)
+
 
